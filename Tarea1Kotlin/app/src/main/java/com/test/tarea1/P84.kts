@@ -78,3 +78,31 @@ fun verifyWeight(graph: String,correct: Int): Boolean {
 println(verifyWeight(minSpanningTree("[a-b/5,a-d/3,b-c/2,b-e/4,c-e/6,d-e/7,d-f/4,d-g/3,e-h/5,f-g/4,g-h/1]"),22))
 println(verifyWeight(minSpanningTree("[a-b/5,b-c/7,a-c/20]"),12))
 println(verifyWeight(minSpanningTree("[a-b/5,b-c/7,a-d/2,d-e/4,c-f/16,b-g/10]"),44))
+
+/*
+minSpanningTree(graph):
+	ans=Graph()
+	visited[graph.nodes.size]
+	start=graph.nodes[0]
+	visited[graph.nodes[0]]=true
+	out_edges=[]
+	for edge in adjlist[graph.nodes[0]]
+		out_edges.append(edge)
+	endfor
+	sort(out_edges)
+	while(not out_edges.empty())
+		edge=out_edges[0]
+		if(not visited[edge.nodes[1]])
+			visited[edge.nodes[1]]=true
+			Graph.addNode(edge.nodes[1])
+			Graph.addEdge(edge)
+			for edge1 in adjlist[edge.node[1]]
+				out_edges.append(edge1)
+			endfor
+		endif
+		out_edges.remove(edge)
+		sort(out_edges)
+	endwhile
+	return ans
+end
+ */

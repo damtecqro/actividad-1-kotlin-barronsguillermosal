@@ -26,3 +26,26 @@ println(rotate(3, "abcdefghijk".toList()))
 println(rotate(-2, "abcdefghijk".toList()))
 println(rotate(12, "abcdefghijk".toList()))
 println(rotate(0, "abcdefghijk".toList()))
+
+/*
+rotate(r,list)
+	ans=[]
+	r=r%list.size
+	if(r>=0)
+		for i=k+1 to list.size
+			ans.append(list[i])
+		endfor
+		for i=1 to k
+			ans.append(list[i])
+		endfor
+	else
+		for i=list.size+k+1 to list.size
+			ans=append(list[i])
+		endfor
+		for i=1 to lst.size+k
+			ans.append(list[i])
+		endfor
+	endif
+	return ans
+end
+ */
